@@ -1,0 +1,18 @@
+{
+  "name": "penrix-coding-core",
+  "version": "0.1.0",
+  "description": "Non-programmer-owner coding workflow: intent grounding, LLM contract reality checks, runtime evidence gates, and plain-language handoff.",
+  "author": {
+    "name": "Penrix"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Penrix Coding Core",
+    "shortDescription": "Intent grounding, reality checks, runtime evidence, and owner handoff",
+    "longDescription": "A coding-agent workflow for a non-programmer product owner. It keeps product decisions with the owner, technical decisions with the coding agent, re-verifies LLM-generated task contracts against repository reality, requires honest runtime evidence, and reports outcomes in plain language.",
+    "developerName": "Penrix",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"]
+  }
+}
