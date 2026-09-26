@@ -21,6 +21,16 @@ The coding agent is responsible for deciding technical findings. Ask Penrix only
 
 If an unresolved finding materially affects the completion claim, that claim remains blocked.
 
+## Preservation review
+
+For a meaningful change, review not only “does the new code work?” but also:
+
+- what existing behavior was not authorized to change;
+- which of those behaviors is plausibly affected by the chosen baseline/diff;
+- whether current tests actually protect that preservation envelope.
+
+A green suite does not prove preservation of behavior the suite never exercises.
+
 ## Ordinary small change
 
 Use the main engineering workflow and fresh verification. Do not spawn multiple reviewers for a trivial mechanical edit unless risk warrants it.
