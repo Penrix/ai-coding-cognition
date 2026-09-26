@@ -27,7 +27,7 @@
 1. cognition/00-owner-and-agent.md
 2. plugins/penrix-coding-core/skills/intent-contract/SKILL.md
 
-目标：从真实项目出发，把产品意图变成可观察、可验证的工程目标。技术选择由 Coding Agent 承担。若已知本机/部署版本比仓库更新，同时读取 cognition/07-source-baseline-authority.md，先恢复真实代码基线。
+目标：从真实项目出发，把产品意图变成可观察、可验证的工程目标。技术选择由 Coding Agent 承担。若已知本机/部署版本比仓库更新，同时读取 cognition/07-source-baseline-authority.md，先恢复真实代码基线。非简单改动同时建立最小 Preservation Envelope，见 cognition/08-preservation-envelope.md。
 
 ## B. 已经有 Issue / 任务合同 / 另一个 LLM 写出的技术方案
 
