@@ -1,6 +1,6 @@
 {
   "name": "penrix-coding-core",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Coding-agent operating contract for a non-programmer product owner: intent grounding, task-contract reality checks, evidence classes, specialist-skill routing, runtime verification, and plain-language handoff.",
   "author": {
     "name": "Penrix",
