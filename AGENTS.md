@@ -11,4 +11,7 @@ When editing this repository:
 - Avoid duplicate authorities. If Superpowers already owns TDD, debugging, worktrees, and review mechanics, route to it instead of copying it.
 - Preserve the non-programmer-owner contract: product intent belongs to the user; technical judgment belongs to the coding agent.
 - Any completion language must obey cognition/02-evidence-and-completion.md.
-- When an upstream project changes materially, update upstreams/README.md and CHANGELOG.md.
+- Environment-specific completion claims must obey cognition/06-environment-routing.md.
+- Keep upstream review state in upstreams/LOCK.md when external behavior materially affects our conclusions.
+- Run python scripts/validate_repo.py after structural changes.
+- When an upstream project changes materially, update upstreams/README.md, upstreams/LOCK.md when reviewed, and CHANGELOG.md.
