@@ -48,6 +48,14 @@ For each material status claim, establish:
 
 When two status documents disagree, prefer current direct evidence and explicitly scoped newer authority. Preserve the older document as history rather than silently merging incompatible states.
 
+## Reconcile attached review
+
+If the contract, plan, Issue, or prior work already has an independent technical review, read it before modifying code.
+
+Create a compact finding ledger. Every material finding must be accepted, rejected with evidence, deferred with consequence, or left explicitly unresolved.
+
+Do not silently drop a review finding merely because it was not copied into the final task-contract wording.
+
 ## Preflight
 
 Before modifying code:
