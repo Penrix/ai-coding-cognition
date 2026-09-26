@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  structure:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +18,55 @@ jobs:
           python-version: "3.12"
       - name: Validate repository structure
         run: python scripts/validate_repo.py
+
+  codex-marketplace-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install current Codex CLI
+        run: npm install -g @openai/codex@latest
+      - name: Show Codex version
+        run: codex --version
+      - name: Use isolated Codex home
+        run: |
+          echo "CODEX_HOME=$RUNNER_TEMP/codex-home" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/codex-home"
+      - name: Add this repository as a marketplace
+        run: codex plugin marketplace add .
+      - name: Let Codex parse the curated catalog
+        run: codex plugin list --marketplace penrix-ai-coding --available --json > "$RUNNER_TEMP/plugin-list.json"
+      - name: Install Penrix Coding Core through Codex
+        run: codex plugin add penrix-coding-core@penrix-ai-coding --json > "$RUNNER_TEMP/plugin-add.json"
+      - name: Assert Codex saw the expected catalog and version
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import Path
+
+          temp = Path(os.environ["RUNNER_TEMP"])
+          listing = json.loads((temp / "plugin-list.json").read_text())
+          added = json.loads((temp / "plugin-add.json").read_text())
+
+          blob = json.dumps(listing)
+          expected = {
+              "penrix-coding-core",
+              "superpowers",
+              "coderabbit",
+              "codex-security",
+              "build-web-apps",
+              "test-android-apps",
+          }
+          missing = sorted(name for name in expected if name not in blob)
+          if missing:
+              raise SystemExit(f"Codex catalog missing plugins: {missing}")
+
+          if added.get("name") != "penrix-coding-core":
+              raise SystemExit(f"Unexpected installed plugin: {added}")
+          if added.get("version") != "0.2.0":
+              raise SystemExit(f"Unexpected Penrix Core version: {added}")
+
+          print("CODEX MARKETPLACE SMOKE: PASS")
