@@ -2,6 +2,12 @@
 
 This repository is designed to be read through the GitHub connection as an external cognition source.
 
+## Important limitation
+
+The repository is not automatically injected into every new ChatGPT conversation.
+
+A new conversation must explicitly ask ChatGPT to read it, or a future plugin/workflow must automate that loading step.
+
 ## Normal entry
 
 Tell ChatGPT:
