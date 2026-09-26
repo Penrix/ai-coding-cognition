@@ -66,7 +66,13 @@ jobs:
 
           if added.get("name") != "penrix-coding-core":
               raise SystemExit(f"Unexpected installed plugin: {added}")
-          if added.get("version") != "0.2.0":
-              raise SystemExit(f"Unexpected Penrix Core version: {added}")
+          manifest = json.loads(
+              Path("plugins/penrix-coding-core/.codex-plugin/plugin.json").read_text()
+          )
+          expected_version = manifest["version"]
+          if added.get("version") != expected_version:
+              raise SystemExit(
+                  f"Unexpected Penrix Core version: installed={added.get('version')} expected={expected_version}"
+              )
 
-          print("CODEX MARKETPLACE SMOKE: PASS")
+          print(f"CODEX MARKETPLACE SMOKE: PASS ({expected_version})")
