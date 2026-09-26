@@ -44,6 +44,22 @@ If a known runtime/deployed version is newer than the available repository sourc
 
 If exact recovery is impossible, state the source gap and choose the least destructive recovery strategy yourself. Ask the owner only when the remaining choice changes product behavior, destroys data, creates irreversible divergence, or carries meaningful external risk.
 
+## Define the preservation envelope
+
+For a non-trivial change, identify any existing behavior that is both already accepted/relied upon and plausibly endangered by this change.
+
+Keep this list small and concrete.
+
+Examples:
+
+- preserve the compact selection UI while changing translation routing;
+- preserve the Send uncertainty boundary while changing rate-limit detection;
+- preserve production provider code when the task is acceptance-layer-only.
+
+Derive these protections from current repository evidence and explicit owner constraints. Do not ask Penrix to enumerate code-level regression surfaces.
+
+Verification must cover the intended behavior delta and the relevant preservation envelope.
+
 ## Separate product unknowns from engineering unknowns
 
 Engineering unknowns are yours to investigate.
@@ -65,7 +81,8 @@ For a non-trivial task, keep only:
 - Goal — one sentence in user-visible terms.
 - Current reality — what the project actually does now, with evidence.
 - Source baseline — which code/runtime is authoritative for the next change and whether a source/runtime split exists.
-- Success evidence — what observation will prove the goal.
+- Preservation envelope — existing behavior that must remain unchanged and is plausibly at risk.
+- Success evidence — what observation will prove both the desired delta and relevant preservation constraints.
 - Constraints — explicit owner boundaries and relevant project constraints.
 - Engineering plan — shortest viable technical route.
 - Open product decisions — only if truly needed.
