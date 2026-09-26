@@ -18,7 +18,7 @@
 
 [START-HERE.md](START-HERE.md)
 
-不要一次性读取整个仓库。先判断任务，再渐进式加载对应 cognition / skill。
+不要一次性读取整个仓库。先建立总规则，再按任务渐进式加载对应 cognition / skill。
 
 ## 核心关系
 
@@ -37,6 +37,8 @@
 如果 ChatGPT 已连接 GitHub：
 
 > 读取 Penrix/ai-coding-cognition 的 START-HERE.md，按其中路由只加载当前任务需要的文件，不要一次读取整个仓库。
+
+这个仓库目前是**显式外部认知源**，不会自动注入每个新的 ChatGPT 对话。新窗口需要明确让 ChatGPT 读取它，或由未来更高层的插件/工作流自动完成这一步。
 
 详见 [docs/usage/chatgpt-web.md](docs/usage/chatgpt-web.md)。
 
@@ -61,10 +63,13 @@ codex plugin marketplace list
 - build-web-apps
 - test-android-apps
 
+如果同名官方插件已经从 OpenAI 官方 marketplace 安装，不要再安装 Penrix marketplace 中的同名副本。Codex 的插件身份包含 marketplace 名称，重复安装虽可区分，但会制造不必要的升级和来源歧义。
+
 详见 [docs/usage/codex.md](docs/usage/codex.md)。
 
 ## 当前 Penrix Core Skills
 
+- using-penrix-coding-core — 总入口、Authority 与 skill 路由
 - intent-contract — 自然语言产品意图 → 可执行、可验证工程目标
 - contract-reality-check — LLM 任务合同 → 当前仓库 / Runtime Reality 核对
 - reality-verification — 区分代码验证与真实环境验证
@@ -76,6 +81,8 @@ codex plugin marketplace list
 - LLM 写代码常见失败模式
 - Evidence / Completion 等级
 - 独立 Review 路由
+- Superpowers 协作边界
+- Windows / Chrome 扩展 / Android 真机等环境路由
 - 默认工作流
 
 ## 上游策略
@@ -84,7 +91,7 @@ codex plugin marketplace list
 
 当前主要借用：
 
-- obra/superpowers
+- obra/superpowers，经 OpenAI Codex curated mirror
 - OpenAI CodeRabbit plugin
 - OpenAI Codex Security
 - OpenAI Build Web Apps
@@ -92,4 +99,14 @@ codex plugin marketplace list
 
 Karpathy guidelines、golbin PRD、dumb-it-down 等项目中与我们实际问题有关的认知，只吸收其有效部分，不让多个框架重复争夺同一职责。
 
-详见 [upstreams/README.md](upstreams/README.md)。
+详见 [upstreams/README.md](upstreams/README.md) 和 [upstreams/LOCK.md](upstreams/LOCK.md)。
+
+## 自检
+
+仓库内置结构验证：
+
+~~~bash
+python scripts/validate_repo.py
+~~~
+
+main 和 PR 会通过 GitHub Actions 自动执行。
