@@ -1,18 +1,40 @@
 {
   "name": "penrix-coding-core",
-  "version": "0.1.0",
-  "description": "Non-programmer-owner coding workflow: intent grounding, LLM contract reality checks, runtime evidence gates, and plain-language handoff.",
+  "version": "0.2.0",
+  "description": "Coding-agent operating contract for a non-programmer product owner: intent grounding, task-contract reality checks, evidence classes, specialist-skill routing, runtime verification, and plain-language handoff.",
   "author": {
-    "name": "Penrix"
+    "name": "Penrix",
+    "url": "https://github.com/Penrix"
   },
+  "homepage": "https://github.com/Penrix/ai-coding-cognition",
+  "repository": "https://github.com/Penrix/ai-coding-cognition",
   "license": "MIT",
+  "keywords": [
+    "coding-agent",
+    "non-programmer-owner",
+    "verification",
+    "workflow",
+    "codex",
+    "review",
+    "reality-check"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Penrix Coding Core",
-    "shortDescription": "Intent grounding, reality checks, runtime evidence, and owner handoff",
-    "longDescription": "A coding-agent workflow for a non-programmer product owner. It keeps product decisions with the owner, technical decisions with the coding agent, re-verifies LLM-generated task contracts against repository reality, requires honest runtime evidence, and reports outcomes in plain language.",
+    "shortDescription": "Owner intent, engineering authority, reality checks, and evidence-based handoff",
+    "longDescription": "Use Penrix Coding Core to keep product authority with a non-programmer owner while the coding agent owns engineering decisions. It routes engineering work to specialist skills, re-verifies LLM-generated task contracts against current reality, requires honest runtime evidence classes, and reports outcomes in plain language.",
     "developerName": "Penrix",
     "category": "Developer Tools",
-    "capabilities": ["Interactive", "Read", "Write"]
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Penrix/ai-coding-cognition",
+    "defaultPrompt": [
+      "Use Penrix Coding Core for this coding task.",
+      "Check this task contract against repository reality before implementing.",
+      "Verify this fix in the strongest available real environment."
+    ]
   }
 }
