@@ -1,13 +1,13 @@
 ---
 name: contract-reality-check
-description: Use when the task arrives as an Issue, spec, plan, acceptance contract, or technical instructions produced partly or wholly by another LLM. Verify technical claims against the current repository and runtime before implementation while preserving the owner's actual goal and explicit boundaries.
+description: Use when the task arrives as an Issue, spec, plan, acceptance contract, status document, handoff, or technical instructions produced partly or wholly by another LLM. Verify technical claims, scope, and freshness against the current repository and runtime before implementation while preserving the owner's actual goal and explicit boundaries.
 ---
 
 # Contract Reality Check
 
-A task contract is evidence of prior reasoning, not proof of current technical reality.
+A task contract or status document is evidence of prior reasoning, not proof of current technical reality.
 
-## Split the contract
+## Split the material
 
 Classify important statements as either owner authority or technical claims.
 
@@ -33,6 +33,21 @@ Re-verify:
 - test and acceptance coverage;
 - assumptions about timing, APIs, environment, browser state, or dependencies.
 
+## Reconcile status and handoff documents
+
+Files named CURRENT, STATUS, HANDOFF, START-HERE, acceptance notes, Issue comments, and prior LLM summaries may describe different branches, machines, dates, or implementation generations.
+
+Do not choose one merely because its filename sounds authoritative.
+
+For each material status claim, establish:
+
+1. which branch, commit, machine, or runtime it describes;
+2. when that claim was last updated;
+3. whether newer code, PR state, CI evidence, or runtime evidence supersedes it;
+4. whether the document is canonical, historical, or scoped to a prior work unit.
+
+When two status documents disagree, prefer current direct evidence and explicitly scoped newer authority. Preserve the older document as history rather than silently merging incompatible states.
+
 ## Preflight
 
 Before modifying code:
@@ -40,7 +55,8 @@ Before modifying code:
 1. confirm the referenced code and state exist;
 2. reproduce or otherwise establish the current behavior when practical;
 3. check whether the proposed acceptance really exercises the original failure;
-4. identify contract statements that are stale, ambiguous, or contradicted by Reality.
+4. identify contract statements that are stale, ambiguous, differently scoped, or contradicted by Reality;
+5. distinguish a check that did not execute from a check that executed and failed.
 
 ## Conflict rule
 
