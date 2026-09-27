@@ -27,6 +27,7 @@ Do not ask Penrix to choose implementation mechanisms merely because multiple te
 - Natural-language feature or bug request -> use intent-contract.
 - Existing Issue, plan, spec, or LLM-generated task contract -> use contract-reality-check before trusting technical claims.
 - Engineering implementation or debugging -> use the best specialist workflow available, including Superpowers when applicable.
+- Before adding fallback/retry/debounce/wrapper/abstraction/configuration/compatibility/cache/duplicate safety state/mock-heavy plumbing, or when a non-trivial diff starts accumulating such mechanisms -> use complexity-gate.
 - Completion or fix claim that depends on runtime behavior -> use reality-verification.
 - End of non-trivial work -> use owner-handoff.
 

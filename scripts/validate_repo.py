@@ -129,6 +129,7 @@ expected_skills = {
     "using-penrix-coding-core",
     "intent-contract",
     "contract-reality-check",
+    "complexity-gate",
     "reality-verification",
     "owner-handoff",
 }

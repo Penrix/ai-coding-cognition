@@ -47,6 +47,27 @@
 - cognition/02-evidence-and-completion.md
 - cognition/05-superpowers-coordination.md
 
+## C2. 代码开始长出额外机制
+
+当实现准备新增以下任一机制时：
+
+- fallback / hidden default；
+- retry / debounce / rate limit / cooldown；
+- wrapper / adapter / factory / interface / generalized helper；
+- compatibility / legacy path；
+- cache / shadow state / second source of truth；
+- 新的 safety state / lifecycle state；
+- mock / fake integration seam；
+- “以后可能用到”的配置或扩展点；
+
+读取：
+
+- plugins/penrix-coding-core/skills/complexity-gate/SKILL.md
+
+目标：让每一层新增复杂度都拿出当前 Reality 的入场证据；避免重复另一组件已经拥有的职责；避免把测试约束偷渡进生产；实现后做一次删除优先的 complexity pass。
+
+这不是“代码越少越好”。真实产品要求、已观察故障和明确外部协议需要多少复杂度，就保留多少。
+
 ## D. 任务声称完成，需要判断“到底能不能用”
 
 读取：

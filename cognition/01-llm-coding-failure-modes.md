@@ -26,6 +26,36 @@ The model adds abstractions, options, configuration, error branches, or framewor
 
 Countermeasure: smallest sufficient design, no speculative flexibility.
 
+## Defensive fantasy
+
+The model converts uncertainty into fallback branches, hidden defaults, broad catches, retries, compatibility code, or "just in case" safety machinery instead of establishing whether the scenario is real.
+
+Countermeasure: use complexity-gate. A recovery path needs current evidence and an intended recovery contract; otherwise expose the violated assumption.
+
+## Duplicate authority
+
+The model reimplements a concern that another layer already owns: retry, submission state, rate limiting, lifecycle, cache truth, compatibility, or safety state.
+
+Countermeasure: identify the authoritative owner and delegate to it. Do not create a second independent state machine without evidence that composition is required.
+
+## Action bias
+
+The model assumes a coding task must end with a code patch even when the reported problem is stale, already fixed, or not reproducible.
+
+Countermeasure: establish current Reality first. "No code change required" is a valid successful outcome.
+
+## Test self-certification
+
+The model writes or alters tests after seeing its own implementation, mocks the broken integration, weakens expectations to match produced output, or treats a fake surface as proof of the real runtime.
+
+Countermeasure: derive expectations from product intent, prior failure, independent invariants, or real protocols. Prefer tests that distinguish the old/broken baseline. Keep CODE VERIFIED and LIVE VERIFIED separate.
+
+## Wrapper proliferation
+
+The model adds one-off helpers, aliases, wrappers, factories, interfaces, or extra configuration because they look architecturally tidy rather than because a real boundary requires them.
+
+Countermeasure: use complexity-gate. Search existing call sites and modify the current owner directly unless the new boundary has evidence-backed independent policy or consumers.
+
 ## Self-certifying completion
 
 The model changes code, sees one green command, and says fixed.

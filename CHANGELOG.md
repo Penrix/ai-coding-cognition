@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 - 2026-09-27 complexity gate
+
+- Added `complexity-gate`, a Penrix-specific admission gate for fallbacks, retries, wrappers, abstractions, compatibility paths, duplicated safety state, mocks, and other speculative mechanisms.
+- Added an implementation-removal pass: every new mechanism must identify the observed failure, explicit requirement, or runtime contract that returns if it is removed.
+- Added explicit protection against duplicate cross-layer authority, test-only constraints leaking into production, fallback masking, action bias, and test self-certification.
+- Expanded the LLM coding failure-mode cognition with community-reported and empirically studied patterns.
+- Added a research note preserving the external evidence and the 2026-09-27 M1A formation case that produced this skill.
+- Routed Penrix Core to invoke the gate when a change begins accumulating generalized defensive machinery.
+
 ## 0.2.0 - 2026-09-26 self-audit
 
 - Added using-penrix-coding-core as the plugin-wide authority and routing entry.

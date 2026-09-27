@@ -72,6 +72,7 @@ codex plugin marketplace list
 - using-penrix-coding-core — 总入口、Authority 与 skill 路由
 - intent-contract — 自然语言产品意图 → 可执行、可验证工程目标
 - contract-reality-check — LLM 任务合同 → 当前仓库 / Runtime Reality 核对
+- complexity-gate — fallback / wrapper / retry / 配置 / mock / 额外状态机等新增复杂度的证据闸门
 - reality-verification — 区分代码验证与真实环境验证
 - owner-handoff — 把工程证据翻译成非程序员 Owner 能直接判断的中文
 
