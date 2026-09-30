@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 - 2026-09-30 reality reconnaissance
+
+- Added `reality-reconnaissance`, a mandatory PRE/POST grounding gate for production-code tasks.
+- PRE now requires current project facts and, when material, current official/upstream evidence plus real user field reports and concrete installation/configuration/runtime details before implementation.
+- POST now re-queries the actual APIs, versions, ownership and operational assumptions introduced by the final diff, classifying them as MATCH / MISMATCH / UNVERIFIED before runtime acceptance.
+- Kept research separate from runtime proof: documentation/community evidence constrains implementation, while `reality-verification` still owns LIVE evidence.
+- Recorded the upstream gap: Superpowers has an open prior-art research tracker/PR, but the reviewed release does not yet contain it and its proposed scope does not cover Penrix's full POST/user-field requirement.
+- Updated the default workflow, routing, upstream lock and repository validator for the new core skill.
+
 ## 0.3.0 - 2026-09-27 complexity gate
 
 - Added `complexity-gate`, a Penrix-specific admission gate for fallbacks, retries, wrappers, abstractions, compatibility paths, duplicated safety state, mocks, and other speculative mechanisms.

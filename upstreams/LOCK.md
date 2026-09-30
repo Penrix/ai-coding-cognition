@@ -4,13 +4,14 @@ This is a review snapshot, not a dependency lockfile.
 
 It records what versions and repository heads were examined when this cognition was last self-audited. Marketplace git-subdir entries may move as upstream repositories move.
 
-Last reviewed: 2026-09-26.
+Last reviewed: 2026-09-30.
 
 | Source | Reviewed state | Decision |
 |---|---|---|
-| openai/plugins | commit 1dc195897af4161d039b80d8471ec0a10c9bbc89 | Primary Codex compatibility source for curated plugins |
+| openai/plugins | commit 5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f | Primary Codex compatibility source for curated plugins |
 | obra/superpowers | v6.4.2, commit 8ca22dba9a94f28898bbce59f2537ff4d87c747d | Semantic upstream; currently newer than OpenAI curated mirror |
 | OpenAI curated Superpowers | v6.3.0 at reviewed openai/plugins head | Used by this marketplace for Codex compatibility/stability |
+| obra/superpowers research tracker | Issue #2129 open; PR #2116 open at head 425793e18117e9931a49bbf003545d66080cce02 when reviewed | Upstream is actively adding pre-design prior-art research; not yet in reviewed release and narrower than Penrix PRE/POST requirement |
 | CodeRabbit | v1.1.4 at reviewed openai/plugins head | Independent diff review |
 | Codex Security | v0.1.24 at reviewed openai/plugins head | Security workflow |
 | Build Web Apps | v0.1.2 at reviewed openai/plugins head | Browser/frontend verification |

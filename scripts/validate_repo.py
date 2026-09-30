@@ -16,6 +16,7 @@ REQUIRED = [
     "AGENTS.md",
     "cognition/00-owner-and-agent.md",
     "cognition/02-evidence-and-completion.md",
+    "cognition/09-reality-reconnaissance.md",
     ".agents/plugins/marketplace.json",
     "plugins/penrix-coding-core/.codex-plugin/plugin.json",
 ]
@@ -129,6 +130,7 @@ expected_skills = {
     "using-penrix-coding-core",
     "intent-contract",
     "contract-reality-check",
+    "reality-reconnaissance",
     "complexity-gate",
     "reality-verification",
     "owner-handoff",

@@ -15,6 +15,21 @@ Prefer links and marketplace references over copying entire upstream repositorie
 
 See LOCK.md for the exact states reviewed during the latest self-audit.
 
+## Current research-boundary note
+
+Superpowers' reviewed release does not yet own the full Reality Reconnaissance responsibility used here.
+
+Upstream tracker `obra/superpowers#2129` and open PR `#2116` are adding a conditional prior-art research step before architectural design.
+
+That is useful and should be reused if/when it lands, but Penrix Core currently keeps a distinct broader responsibility:
+
+- current official/upstream/user-field evidence before production implementation;
+- concrete install/config/run reality;
+- a second Reality Audit against the actual finished diff;
+- explicit handoff from research evidence to target-runtime verification.
+
+Do not duplicate Superpowers' engineering mechanics while implementing this layer.
+
 ## Rule for adding upstreams
 
 Do not add an upstream because it is popular.

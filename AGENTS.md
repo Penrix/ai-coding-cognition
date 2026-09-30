@@ -10,6 +10,7 @@ When editing this repository:
 - A new rule must solve an observed failure mode or a clearly defined workflow need. Do not accumulate generic best practices for their own sake.
 - Avoid duplicate authorities. If Superpowers already owns TDD, debugging, worktrees, and review mechanics, route to it instead of copying it.
 - Preserve the non-programmer-owner contract: product intent belongs to the user; technical judgment belongs to the coding agent.
+- For any production-code task, run the Reality Reconnaissance gate before implementation and again against the final diff before completion. External/current/user-field research is required when those facts can materially change correctness; do not substitute model prior or repository-only reasoning.
 - Any completion language must obey cognition/02-evidence-and-completion.md.
 - Environment-specific completion claims must obey cognition/06-environment-routing.md.
 - Keep upstream review state in upstreams/LOCK.md when external behavior materially affects our conclusions.

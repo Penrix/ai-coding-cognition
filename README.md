@@ -28,6 +28,8 @@
 
 - 不把程序员判断重新外包给用户；
 - LLM 写出的 Issue / spec / task contract 不是 Reality；
+- 写生产代码前先恢复当前项目、官方/上游、真实用户现场和目标环境中真正相关的事实；
+- 写完后再拿实际 diff 回到这些 Reality 做一次攻击式复核；
 - tests pass 不自动等于真实环境能用；
 - review 通过不替代 runtime 验收；
 - 没有对应证据，不允许提高完成状态。
@@ -72,6 +74,7 @@ codex plugin marketplace list
 - using-penrix-coding-core — 总入口、Authority 与 skill 路由
 - intent-contract — 自然语言产品意图 → 可执行、可验证工程目标
 - contract-reality-check — LLM 任务合同 → 当前仓库 / Runtime Reality 核对
+- reality-reconnaissance — 写代码前恢复当前实现/外部/用户现场事实，写完后用实际 diff 再做一次 Reality Audit
 - complexity-gate — fallback / wrapper / retry / 配置 / mock / 额外状态机等新增复杂度的证据闸门
 - reality-verification — 区分代码验证与真实环境验证
 - owner-handoff — 把工程证据翻译成非程序员 Owner 能直接判断的中文
@@ -84,6 +87,8 @@ codex plugin marketplace list
 - 独立 Review 路由
 - Superpowers 协作边界
 - Windows / Chrome 扩展 / Android 真机等环境路由
+- Source Baseline / Preservation Envelope
+- Reality Reconnaissance：PRE 外部/现场取证 + POST diff Reality Audit
 - 默认工作流
 
 ## 上游策略
@@ -99,6 +104,8 @@ codex plugin marketplace list
 - OpenAI Test Android Apps
 
 Karpathy guidelines、golbin PRD、dumb-it-down 等项目中与我们实际问题有关的认知，只吸收其有效部分，不让多个框架重复争夺同一职责。
+
+Superpowers 上游当前也在讨论/实现 design 前 prior-art research，但截至本仓库 2026-09-30 审查状态，相关 PR 尚未进入 reviewed release；而 Penrix 的要求还包括代码完成后的 Reality Audit 与真实用户现场证据，因此仍由 Penrix Core 单独拥有这一职责。
 
 详见 [upstreams/README.md](upstreams/README.md) 和 [upstreams/LOCK.md](upstreams/LOCK.md)。
 
