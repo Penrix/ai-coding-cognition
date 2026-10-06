@@ -24,6 +24,7 @@ Do not ask Penrix to choose implementation mechanisms merely because multiple te
 
 ## Route
 
+- Already-solved mechanical execution (existing answer/patch/content/decision; writeback/sync/move/rename/record; or Penrix explicitly says not to research and only execute) -> use mechanical-execution-fastpath before any broader workflow. Once explicit success conditions are met, STOP.
 - Natural-language feature or bug request -> use intent-contract.
 - Existing Issue, plan, spec, or LLM-generated task contract -> use contract-reality-check before trusting technical claims.
 - Any task that will write production code -> run reality-reconnaissance PRE before the first production edit; use only the evidence lanes material to the task.
