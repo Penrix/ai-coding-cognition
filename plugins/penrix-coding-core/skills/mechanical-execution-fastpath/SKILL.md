@@ -60,6 +60,39 @@ Do not use this Fast Path when a real unresolved engineering, product, or factua
    - no extra audit merely to appear careful;
    - no new theory, architecture, cleanup, index maintenance, or adjacent repair unless the requested execution fails without it.
 
+## Fast Path suppresses generic workflow ceremony
+
+Once a task is correctly classified as already-solved mechanical execution, do not automatically run broader workflows just because they normally exist for coding work.
+
+Do not re-run `intent-contract`, `contract-reality-check`, Reality Reconnaissance, planning, review, owner-handoff, or other generic process steps unless one of them is concretely required to complete or verify the requested mechanical action.
+
+The existence of a general repository workflow is not by itself evidence that the workflow must be re-executed.
+
+If the user explicitly narrowed the task to “write / sync / apply / move / record only”, treat that as a scope boundary, not as an invitation to reopen the solved problem.
+
+## GitHub writeback fast path
+
+When the task is only to write already-settled conclusions into GitHub, use the shortest bounded path:
+
+```text
+locate the exact target file / next required number if genuinely needed
+→ write the already-settled content
+→ read back only the files actually written
+→ patch only concrete omissions or write failures
+→ STOP
+```
+
+Rules:
+
+- Do not re-read theory to decide whether the settled conclusion is still good.
+- Do not reopen the reasoning that produced the content.
+- Preserve verbatim Author Rulings when the user requires exact wording.
+- If numbering is required, determine it once from the minimal authoritative location; do not repeatedly search neighboring numbers.
+- Do not inspect `CURRENT.md`, `ENTRY-MAP.md`, indexes, manifests, README files, or adjacent docs unless a repository rule already known to be mandatory for this exact write requires them, or the write/readback exposes a concrete failure that depends on them.
+- A successful write plus successful readback of the written targets is sufficient completion evidence for the writeback itself.
+
+For this task type, push/writeback does not require new problem-solving. Execution is not a second research pass.
+
 ## Verification boundary
 
 > **Verification scope must not exceed execution scope unless a concrete failure requires expansion.**
