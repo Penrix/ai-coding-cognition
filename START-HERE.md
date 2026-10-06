@@ -12,6 +12,24 @@
 
 它负责权力关系和路由，不替代专业工程 skill。
 
+### 0.1 先判定：是不是已经解决、只剩机械执行
+
+如果答案、patch、结论、目标文件或执行决定已经存在，而当前只是在：
+
+- 把已经讨论清楚的结论写进 GitHub；
+- 应用现成 patch / exact edit；
+- 把已有结果同步到 Issue / PR / 文档；
+- 重命名、搬运、记录已知 artifact；
+- 或 Penrix 明确说“不要重新研究，只执行”；
+
+先读取：
+
+- plugins/penrix-coding-core/skills/mechanical-execution-fastpath/SKILL.md
+
+进入 Fast Path 后，不重新研究问题本身，不重新规划已经明确的执行路径，只发现完成下一动作所必需的最小未知量；显式成功条件满足后立即 STOP。
+
+> **Verification scope must not exceed execution scope unless a concrete failure requires expansion.**
+
 同时记住：
 
 - Penrix 是产品 Owner，不是程序员；
